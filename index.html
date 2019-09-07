@@ -9,7 +9,7 @@
 <body>
     <script>
         
-        var task = ["laundry", "code", "wash car", "take out trash",
+        /*var task = ["laundry", "code", "wash car", "take out trash",
         "read a book", "go to work", "sleep"];
         var progress = ["done", "in progress", "to do"];
         
@@ -17,7 +17,7 @@
         console.log(task[task.length-1])
         console.log(task);
 
-        /*
+        
         var question1 = prompt("which of the " + task.length + " tasks would " +
         "you like like to perform?");
         var question2 = prompt("status: 1 = done, 2 = in progress, 3 = to do");
@@ -25,6 +25,13 @@
         console.log("today you will " + task[question1-1] + " status of task = " + 
             progress[question2-1]);
         */
+        var animals = ["cat","dog","rabbit","bird","fish","zebra"];
+        var startVal = animals.length;
+        console.log(startVal);
+        animals[20] = "horse";
+        animals.fill("mouse",startVal , (animals.length-1));
+
+        console.log(animals);
 
     </script>
 
