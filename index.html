@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Complete JavaScript Course</title>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id="output"></div>
+    <script>
+        var output = document.getElementById("output");
+        var userNames = ["mike", "john", "larry"];
+
+        userNames = userNames.reverse();
+        for (var x = 0; x < userNames.length; x++) {
+            
+            output.innerHTML += userNames[x] + "<br>";
+        }
+
+        output.innerHTML += "For in<br>";
+        for (value of userNames) {
+            output.innerHTML += value + "<br>";
+        }
+    </script>
 </body>
+
 </html>
