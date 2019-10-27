@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Complete JavaScript Course</title>
+  </head>
+
+  <body>
+    <div id="wrapper">Page 1</div>
+    <img id="imgSwap"
+      onmouseover="cImg(this)"
+      onmouseout="bImg(this)"
+    />
+
+    <form name="myForm">
+      <!--input type="button" id="id1" value="click 1" />
+      <input type="button" id="id2" value="click 2" />
+      <input type="button" id="id3" value="click 3" /-->
+    </form>
+
+    <script>
+      var imgHolder = 
+      "https://via.placeholder.com/350x150/000000?text=Image1";
+
+      window.onload = function() {
+        document.getElementById("imgSwap").src = imgHolder;
+      }
+
+      function cImg(t) {
+        message(t.src);
+        imgHolder = t.src;
+        t.src = "https://via.placeholder.com/350x150/FF0000?text=Image2";
+      }
+
+      function message(m) {
+        document.getElementById("wrapper").innerHTML = m;
+      }
+
+      function bImg(t) {
+        t.src = imgHolder;
+        document.getElementById("wrapper").innerHTML = "Original"
+      }
+    </script>
+  </body>
+</html>
